@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Logueado - VitoMaite</title>
+    <link rel="stylesheet" href="css/buscarLogueado.css">
+    <link rel="icon" type="image/ico" href="img/favicon.ico"/>
+</head>
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <div class="logo">
+            <img src="img/VitoMaiteLogo2.png" alt="Logo de la app">
+            <h2>𝒱𝒾𝓉𝑜𝑀𝒶𝒾𝓉𝑒</h2>
+        </div>
+        <h1 class="titulo-cita">Encuentra tu cita ideal en VitoMaite</h1>
+        <nav>
+            <button id="botonInicio">Inicio</button>
+            <button id="atrasBtn">Atrás</button>
+            <button id="botonCerrarSesion">Cerrar Sesión</button>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Formulario de búsqueda -->
+        <section class="formulario-section">
+            <form id="buscarForm">
+                <h2>Busca tu cita</h2>
+
+                <!-- Campo: ¿Qué estás buscando? -->
+                <div class="form-group">
+                    <label for="genero">¿Qué estás buscando?</label>
+                    <select id="genero" name="genero">
+                        <option value="" disabled selected>Selecciona un sexo</option>
+                        <option value="hombre">Hombre</option>
+                        <option value="mujer">Mujer</option>
+                    </select>
+                </div>
+
+                <!-- Campo: Edad -->
+                <div class="form-group">
+                    <label for="edadDesde">Entre</label>
+                    <select id="edadDesde" name="edadDesde">
+                        <option value="" disabled selected>Edad mínima</option>
+                    </select>
+                    <label for="edadHasta">y</label>
+                    <select id="edadHasta" name="edadHasta">
+                        <option value="" disabled selected>Edad máxima</option>
+                    </select>
+                </div>
+
+                <!-- Campo: Ciudad -->
+                <div class="form-group">
+                    <label for="ciudad">¿En qué ciudad vives?</label>
+                    <select id="ciudad" name="ciudad">
+                        <option value="" disabled selected>Selecciona una ciudad</option>
+                        <option value="vitoria">Vitoria</option>
+                        <option value="bilbo">Bilbo</option>
+                        <option value="donosti">Donosti</option>
+                    </select>
+                </div>
+                
+                <section class="aficiones-section">
+                    <fieldset>
+                        <legend>¿Qué aficiones tienes?</legend>
+                        <div id="checkboxContainer">
+                            <!-- Los checkboxes de aficiones se agregarán dinámicamente aquí -->
+                        </div>
+                    </fieldset>
+                </section>
+
+                <!-- Botón de búsqueda -->
+                <button type="button" id="buscarBtn">Ver solteros/as</button>
+            </form>
+        </section>
+
+        <!-- Campo: ¿Qué aficiones tienes? -->
+       
+
+        <!-- Contenedor para mostrar los usuarios -->
+        <section id="tabla-section">
+            <div id="tablaSolteros" class="tabla-container">
+                <!-- Aquí se mostrarán los resultados de búsqueda -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div>© 2024 VitoMaite. Todos los derechos reservados.</div>
+    </footer>
+
+    <script src="js/busquedaAficiones.js" defer></script>
+</body>
+</html>

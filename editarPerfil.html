@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/editarPerfil.css">
+    <title>Editar Perfil - VitoMaite</title>
+    <link rel="icon" type="image/ico" href="img/favicon.ico"/>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/VitoMaiteLogo2.png" alt="logo de la app">
+            <h2>𝒱𝒾𝓉𝑜𝑀𝒶𝒾𝓉𝑒</h2>
+           
+        </div>
+        <h1 class="titulo-cita">Edita tu perfil</h1>
+        <nav>
+           <button id="botonInicio">Inicio</button>
+            <button id="atrasBtn">Atrás</button>
+            <button id="botonCerrarSesion">Cerrar Sesión</button>
+        </nav>
+    </header>
+    <main>
+        <section class="editar-perfil">
+            <div class="perfil-header">
+                <img id="fotoPerfil" src="" alt="Foto de perfil" class="foto-perfil">
+                <h3 id="nombrePerfil"></h3>
+            </div>
+            <form id="formEditarPerfil" class="formulario">
+                <h2>Actualizar información de usuario</h2>
+                <table class="tabla-formulario">
+                    <tr>
+                        <td><label for="correo">Correo:</label></td>
+                        <td><input type="email" id="correo" name="correo" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><label for="edad">Edad:</label></td>
+                        <td><input type="number" id="edad" name="edad" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><label for="genero">Género:</label></td>
+                        <td><input type="text" id="genero" name="genero" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><label for="latitud">Latitud:</label></td>
+                        <td><input type="text" id="lat" name="lat" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><label for="longitud">Longitud:</label></td>
+                        <td><input type="text" id="lon" name="lon" readonly></td>
+                    </tr>                    
+                    <tr>
+                        <td><label for="ciudad">Ciudad:</label></td>
+                        <td>
+                            <select id="ciudad" name="ciudad" required>
+                                <option value="Vitoria">Vitoria</option>
+                                <option value="Bilbo">Bilbo</option>
+                                <option value="Donosti">Donosti</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="foto">Foto de perfil:</label></td>
+                        <td>
+                            <input type="file" id="foto" name="foto" accept="image/*">
+                            <div id="dropZone">Arrastra una imagen aquí</div>
+                            <img id="previewImage" src="" alt="Vista previa de la foto de perfil">
+                        </td>
+                    </tr>
+                </table>
+                    <button id="guardarPerfilBtn">Guardar Cambios</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div>© 2024 VitoMaite. Todos los derechos reservados.</div>
+    </footer>
+    <script src="js/editarPerfil.js" defer></script>
+</body>
+</html>

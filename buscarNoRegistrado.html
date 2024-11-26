@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar No Registrado - MaiteVito</title>
+    <link rel="stylesheet" href="css/buscarNoRegistrado.css"> <!-- Enlazando el archivo de estilos -->
+    <link rel="icon" type="image/ico" href="img/favicon.ico"/>
+</head>
+<body>
+    <header>
+         <div class="logo">
+            <img src="img/VitoMaiteLogo2.png" alt="logo de la app">
+            <h2>𝒱𝒾𝓉𝑜𝑀𝒶𝒾𝓉𝑒</h2>
+        </div>
+        <h1 class="titulo-cita">Encuentra tu cita ideal en VitoMaite</h1>
+        <nav>
+            <button id="botonIniciarSesion">Iniciar Sesión</button>
+            <button id="atrasBtn">Atrás</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <form id="buscarForm">
+
+                <!-- Campo: ¿Qué estás buscando? -->
+                <label for="genero">¿Qué estás buscando?</label>
+                <select id="genero" name="genero">
+                    <option value="" disabled selected>Selecciona un sexo</option>
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                </select>
+
+                <!-- Campo: Edad -->
+                <label for="edadDesde">Entre</label>
+                <select id="edadDesde" name="edadDesde">
+                    <option value="" disabled selected>Edad mínima</option>
+                </select>
+                <label for="edadHasta">y</label>
+                <select id="edadHasta" name="edadHasta">
+                    <option value="" disabled selected>Edad máxima</option>
+                </select>
+
+                <!-- Campo: Ciudad -->
+                <label for="ciudad">¿En qué ciudad vives?</label>
+                <select id="ciudad" name="ciudad">
+                    <option value="" disabled selected>Selecciona una ciudad</option>
+                    <option value="vitoria">Vitoria</option>
+                    <option value="bilbo">Bilbo</option>
+                    <option value="donosti">Donosti</option>
+                </select>
+
+                <!-- Botón de búsqueda -->
+                <button type="button" id="buscarBtn">Ver solteros/as</button>
+            </form>
+
+            <!-- Contenedor para mostrar los usuarios -->
+            <div id="tablaSolteros"></div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div>© 2024 VitoMaite. Todos los derechos reservados.</div>
+    </footer>
+    <script src="js/buscarNoRegistrado.js" defer></script> <!-- Agrega tu archivo de JavaScript aquí -->
+</body>
+</html>

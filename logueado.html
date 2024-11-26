@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css"> <!-- Enlazando el archivo de estilos -->
+    <link rel="icon" type="image/ico" href="img/favicon.ico"/>
+    <title>VitoMaite - Perfil</title>
+</head>
+
+<body class="logueado">
+
+    <header>
+        <div class="logo">
+            <img src="img/VitoMaiteLogo2.png" alt="logo de la app">
+            <h2>𝒱𝒾𝓉𝑜𝑀𝒶𝒾𝓉𝑒</h2>
+        </div>
+        <div class="perfil">
+            <!-- Menú en el Header -->
+            <nav class="menu-header">
+                <button id="Perfil" class="menu-item">PERFIL</button>
+
+                <!-- Menú de Aficiones -->
+                <div class="menu-desplegable">
+                    <button class="menu-boton">AFICIONES</button>
+                    <div class="submenu">
+                        <button id="verAficiones">VER AFICIONES</button>
+                        <button id="editarAficiones">EDITAR AFICIONES</button>
+                    </div>
+                </div>
+
+                <!-- Menú de Búsqueda -->
+                <div class="menu-desplegable">
+                    <button class="menu-boton">BÚSQUEDA</button>
+                    <div class="submenu">
+                        <button id="AficionesBtn">POR AFICIONES</button>
+                        <button id="GeolocalizadoBtn">POR GEOLOCALIZACIÓN</button>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Saludo personalizado -->
+            <div id="saludo" class="saludo"></div>
+            <img id="fotoPerfil" src="" alt="Foto de perfil" class="foto-perfil">
+            <button id="botonCerrarSesion" class="cerrar-sesion">Cerrar Sesión</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Botones principales -->
+        <div class="botones-principales">
+            <button id="misLikes" class="boton-principal">MIS LIKES</button>
+            <button id="buscar" class="boton-principal">BUSCAR</button>
+            <button id="verMatchesBtn" class="boton-principal">VER MATCHES</button> <!-- Botón añadido -->
+        </div>
+
+        <!-- Tabla de Likes -->
+        <section class="tabla-seccion" id="tablaLikesSeccion">
+            <h3>Mis Likes</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Usuario</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-likes">
+                    <!-- Los likes se llenarán desde JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Tabla de Matches -->
+        <section class="tabla-seccion" id="tablaMatchesSeccion">
+            <h3>Mis Matches</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha del Match</th>
+                        <th>Usuario</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-matches">
+                    <!-- Los matches se llenarán desde JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <div>© 2024 VitoMaite. Todos los derechos reservados.</div>
+    </footer>
+
+    <script src="js/logueado.js" defer></script>
+</body>
+
+</html>
