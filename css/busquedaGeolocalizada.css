@@ -1,0 +1,155 @@
+/* Estilos generales para el body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3e5f5; /* Fondo suave */
+}
+
+/* Estilo para el header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fef8f9;
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 60px;
+    width: auto;
+    margin-right: 15px;
+}
+
+header h2 {
+    font-size: 24px;
+    font-family: 'Georgia', serif;
+    color: black;
+    margin: 0;
+}
+
+.titulo-cita {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 22px;
+    color: #333;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+/* Estilos para los botones */
+#atrasBtn, #botonInicio {
+    padding: 0.5rem 1rem;  /* Ajustar el relleno si es necesario para reducir el tamaño */
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #f0f0f0; /* Fondo claro */
+    transition: background-color 0.3s;
+    margin-right: 1rem; /* Añadir espacio a la derecha del botón */
+    width: auto;  /* Ajustar el tamaño del botón a su contenido */
+}
+
+#atrasBtn:hover, #botonInicio:hover {
+    background-color: #e0e0e0; /* Fondo al pasar el mouse */
+}
+
+#botonCerrarSesion {
+    padding: 0.5rem 1rem;  /* Ajustar el relleno si es necesario para reducir el tamaño */
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #ff4f81; 
+    color: white; /* Texto blanco */
+    transition: background-color 0.3s;
+    margin-right: 1rem; /* Añadir espacio a la derecha del botón */
+    width: auto;  /* Ajustar el tamaño del botón a su contenido */
+}
+
+/* Estilo para el footer */
+footer {
+    background-color: #fef8f9;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el main */
+main {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 140px); /* Para no solaparse con header y footer */
+    background-color: #f3e5f5;
+    margin-top: 80px; /* Ajuste superior */
+}
+
+/* Control de rango (slider) */
+.radio-control {
+    margin-bottom: 20px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.radio-control input[type="range"] {
+    width: 80%; /* Ajusta el tamaño del control */
+    max-width: 400px; /* Limita el tamaño */
+}
+
+/* Contenedor del mapa */
+.map-container {
+    width: 100%;
+    max-width: 800px; /* Limita el tamaño máximo del mapa */
+    height: 400px; /* Establece la altura del mapa */
+    margin-top: 10px; /* Se reduce el espacio superior */
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos responsivos */
+@media (max-width: 700px) {
+    header {
+        flex-direction: row;
+    }
+    .logo img {
+        height: 50px;
+        margin-right: 10px;
+    }
+    nav {
+        flex-direction: row;
+    }
+    .titulo-cita {
+        font-size: 16px;
+    }
+    .radio-control input[type="range"] {
+        width: 100%;
+    }
+    .map-container {
+        width: 100%;
+        height: 300px; /* Reducimos el tamaño del mapa en pantallas más pequeñas */
+    }
+}
